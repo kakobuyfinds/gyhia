@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Rizzitgo spreadsheet: Finds, Fit &amp; QC Field Notes</title>
+  <meta name="description" content="Use this independent Rizzitgo spreadsheet guide to compare product links, sizing, QC photos and total costs. Explore fashion categories on CAFANS.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#173ed5">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Rizzitgo spreadsheet — Read the details. Refine the shortlist.">
+  <meta property="og:description" content="Independent field notes for checking product sources, fit, warehouse photos and the full cost of a fashion find.">
+  <meta property="og:image" content="https://www.nike.qa/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dwff6f1a37/nk/4ee/a/3/0/b/0/4eea30b0_fcae_4804_a6b5_ac01a3cd1c93.png?sw=900&amp;sh=700&amp;sm=fit">
+  <meta property="og:image:alt" content="White Nike Cortez sneaker with a black Swoosh, shown in profile">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://www.nike.qa">
+  <!-- index.html. Add an absolute self-referencing canonical and og:url once the actual publication URL is known. -->
+  <!--
+    Editorial research, 2 November 2026. Randomly selected primary: Rizzitgo spreadsheet.
+    Google first-page rankings could not be verified in this environment.
+    These are ten relevant sites retrieved through available search tools, not a claimed Google top ten.
+
+    Reference / observed search intent and page structure:
+    https://rizzitgo.delivery/ — categories, W2C discovery, ordering introduction.
+    https://www.ssfinds.com/rizzitgo-spreadsheet — product links, QC, beginner tutorial.
+    https://rizzitgospreadsheets.net/ — category index, dataset context.
+    https://sheetrizzitgo.com/ — independent research, source-link comparison.
+    https://rizzitgospreadsheetx.com/ — category/brand browsing, practical guides.
+    https://rizzitgo-spreadsheets.com/ — keyword search, available QC signals.
+    https://www.rizzitgo.net/help-center/ — questions, ordering stages, shipping considerations.
+    https://rizzitgo.org/ — spreadsheet introduction and category navigation.
+    https://rizzitgo.click/ — fashion discovery and shopping questions.
+    https://rizzitgo.autos/articles/step-by-step-rizzitgo-spreadsheet-guide — tracking fields; a distinct reseller intent.
+
+    The original guide below does not adopt unverified stock, discount, review or trust claims.
+
+    Secondary keywords (5):
+    Rizzitgo finds; Rizzitgo product links; Rizzitgo QC photos;
+    Rizzitgo sizing guide; Rizzitgo shipping checklist.
+
+    Related editorial intents (30; not search-volume claims):
+    how to use a Rizzitgo spreadsheet; beginner shopping guide; sneaker comparison;
+    white leather sneakers; shoe size conversion; foot length measurement;
+    clothing size chart; chest width measurement; T-shirt fit; hoodie layering;
+    jacket sleeve length; pants inseam; shorts waist measurement; matching sets;
+    jersey sizing; underwear fabric composition; adjustable cap fit; bracelet sizing;
+    source product URL; Taobao product links; Weidian listings; 1688 product references;
+    product variant check; warehouse inspection photos; QC photo limitations;
+    unavailable product links; international shipping estimate; volumetric weight;
+    currency conversion fees; return policy before ordering.
+
+    Brand photography sources:
+    Nike Qatar Cortez DM4044-105;
+    Louis Vuitton Pique Cotton T-Shirt 1AFBA7;
+    Gucci cotton baseball hat 8457534HBHS9068;
+    Hermès Clic H H700001FP01.
+
+    Images are visual references, not proof of CAFANS stock, seller identity or authenticity.
+  -->
+  <style>
+    :root{
+      color-scheme:light;
+      --blue:#173ed5;
+      --ink:#17223c;
+      --muted:#526077;
+      --paper:#f4f6fc;
+      --line:#dce2f0;
+      --soft:#e9eeff;
+      --white:#fff
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:var(--paper);
+      color:var(--ink);
+      font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif
+    }
+    h1,h2,h3,p,figure{margin:0}
+    h1,h2,h3{line-height:1.12;text-wrap:balance}
+    h1{
+      font-size:clamp(2.7rem,6.5vw,5.6rem);
+      letter-spacing:-.065em;
+      font-weight:800
+    }
+    h2{
+      font-size:clamp(1.8rem,3.4vw,2.8rem);
+      letter-spacing:-.045em
+    }
+    h3{font-size:1.15rem;letter-spacing:-.02em}
+    a{color:inherit;text-underline-offset:4px}
+    a:focus-visible,summary:focus-visible{
+      outline:3px solid var(--blue);
+      outline-offset:5px
+    }
+    img{display:block;width:100%;height:auto}
+    p+p{margin-top:1rem}
+    .wrap{
+      width:min(1200px,calc(100% - 48px));
+      margin-inline:auto
+    }
+    .mast{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:18px;
+      padding:24px 0
+    }
+    .wordmark{
+      font-weight:900;
+      text-decoration:none;
+      letter-spacing:-.05em;
+      font-size:1.4rem
+    }
+    .wordmark span{color:var(--blue)}
+    .small{font-size:.82rem;color:var(--muted)}
+    .label{
+      font-size:.72rem;
+      letter-spacing:.16em;
+      font-weight:800;
+      text-transform:uppercase;
+      color:var(--blue)
+    }
+    .toplink{font-size:.85rem;font-weight:700}
+    .categories{
+      background:var(--white);
+      border-block:1px solid var(--line);
+      padding:17px 0
+    }
+    .categoryhead{
+      display:flex;
+      justify-content:space-between;
+      gap:15px;
+      margin-bottom:12px
+    }
+    .categorylinks{display:flex;flex-wrap:wrap;gap:8px}
+    .categorylinks a{
+      padding:7px 12px;
+      border:1px solid var(--line);
+      border-radius:6px;
+      font-size:.8rem;
+      text-decoration:none;
+      font-weight:650;
+      transition:background .15s,color .15s
+    }
+    .categorylinks a:hover{
+      background:var(--blue);
+      color:white;
+      border-color:var(--blue)
+    }
+    .hero{
+      display:grid;
+      grid-template-columns:1.06fr 1fr;
+      gap:40px;
+      align-items:center;
+      padding:54px 0 42px
+    }
+    .hero h1{margin:15px 0 22px}
+    .hero h1 span{display:block;color:var(--blue)}
+    .intro{
+      color:var(--muted);
+      max-width:53ch;
+      font-size:1.08rem
+    }
+    .button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:18px;
+      background:var(--blue);
+      color:#fff;
+      padding:13px 21px;
+      border-radius:6px;
+      text-decoration:none;
+      font-size:.9rem;
+      font-weight:750
+    }
+    .hero .button{margin-top:24px}
+    .herofigure{
+      background:var(--soft);
+      border-radius:12px;
+      overflow:hidden;
+      position:relative
+    }
+    .herofigure img{
+      aspect-ratio:1.25;
+      object-fit:contain;
+      padding:32px
+    }
+    .herofigure figcaption{
+      background:var(--white);
+      padding:16px 20px;
+      font-size:.78rem;
+      border-top:1px solid var(--line)
+    }
+    .indexstamp{
+      position:absolute;
+      top:18px;
+      left:20px;
+      font:700 .75rem/1.4 ui-monospace,monospace;
+      color:var(--blue)
+    }
+    .answer{
+      background:var(--ink);
+      color:#fff;
+      padding:27px 30px;
+      border-radius:10px;
+      display:grid;
+      grid-template-columns:190px 1fr;
+      gap:24px
+    }
+    .answer h2{font-size:1.2rem;letter-spacing:-.02em}
+    .answer p{font-size:.96rem;color:#e0e6f6}
+    .section{
+      padding:64px 0;
+      border-bottom:1px solid var(--line)
+    }
+    .sectionhead{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:30px;
+      margin-bottom:28px
+    }
+    .sectionhead h2{max-width:620px}
+    .sectionhead p{
+      max-width:320px;
+      color:var(--muted);
+      font-size:.9rem
+    }
+    .sectionhead .label{margin-bottom:12px}
+    .workflow{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:28px;
+      counter-reset:step
+    }
+    .workflow article{
+      counter-increment:step;
+      border-top:3px solid var(--blue);
+      padding-top:17px
+    }
+    .workflow article::before{
+      content:"0" counter(step);
+      display:block;
+      font:700 .8rem/1.4 ui-monospace,monospace;
+      color:var(--blue);
+      margin-bottom:18px
+    }
+    .workflow h3{margin-bottom:12px}
+    .workflow p,.note p{color:var(--muted);font-size:.94rem}
+    .referencegrid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px
+    }
+    .reference{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:10px;
+      overflow:hidden
+    }
+    .reference img{
+      aspect-ratio:1;
+      object-fit:contain;
+      background:#f7f7f7;
+      padding:20px
+    }
+    .reference figcaption{padding:22px}
+    .reference .label{font-size:.65rem;margin-bottom:10px}
+    .reference h3{margin-bottom:10px}
+    .reference p{font-size:.88rem;color:var(--muted)}
+    .reference a{
+      display:inline-block;
+      margin-top:15px;
+      font-size:.83rem;
+      font-weight:750;
+      color:var(--blue)
+    }
+    .disclosure{
+      margin-top:18px;
+      max-width:100ch;
+      font-size:.78rem;
+      color:var(--muted)
+    }
+    .tablebox{
+      overflow-x:auto;
+      border:1px solid var(--line);
+      border-radius:10px;
+      background:#fff
+    }
+    table{
+      border-collapse:collapse;
+      width:100%;
+      min-width:610px;
+      font-size:.9rem;
+      text-align:left
+    }
+    caption{
+      text-align:left;
+      padding:18px 22px;
+      font-weight:750;
+      color:var(--blue)
+    }
+    th,td{
+      padding:16px 22px;
+      border-top:1px solid var(--line);
+      vertical-align:top
+    }
+    thead th{background:var(--soft)}
+    tbody th{width:23%;font-weight:700}
+    td{color:var(--muted)}
+    .notes{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px
+    }
+    .note{
+      padding:28px;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:10px
+    }
+    .note .label{margin-bottom:14px}
+    .note h3{font-size:1.5rem;margin-bottom:16px}
+    .note p+p{margin-top:12px}
+    .formula{
+      display:block;
+      margin:18px 0;
+      padding:16px;
+      background:var(--soft);
+      font-size:.87rem;
+      font-weight:700;
+      line-height:1.7
+    }
+    .faqgrid{
+      display:grid;
+      grid-template-columns:.65fr 1.35fr;
+      gap:60px
+    }
+    .faqintro p{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:.94rem
+    }
+    details{
+      border-top:1px solid var(--line);
+      padding:19px 0
+    }
+    details:last-child{border-bottom:1px solid var(--line)}
+    summary{
+      cursor:pointer;
+      font-weight:700;
+      padding-right:15px;
+      line-height:1.4
+    }
+    details p{
+      padding-top:12px;
+      font-size:.92rem;
+      color:var(--muted)
+    }
+    .closing{
+      background:var(--blue);
+      color:#fff;
+      padding:36px;
+      border-radius:10px;
+      margin:44px 0;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:28px
+    }
+    .closing h2{font-size:1.8rem}
+    .closing p{
+      margin-top:10px;
+      font-size:.92rem;
+      color:#e0e7ff
+    }
+    .closing .button{
+      background:#fff;
+      color:var(--blue);
+      white-space:nowrap
+    }
+    footer{
+      border-top:1px solid var(--line);
+      padding:27px 0 35px
+    }
+    footer p{
+      max-width:100ch;
+      font-size:.78rem;
+      color:var(--muted)
+    }
+    @media(max-width:850px){
+      .hero{grid-template-columns:1fr;gap:28px}
+      .herofigure{max-width:620px}
+      .herofigure img{max-height:430px}
+      .workflow{gap:20px}
+      .referencegrid{gap:12px}
+      .reference figcaption{padding:18px}
+      .faqgrid{grid-template-columns:1fr;gap:26px}
+      .sectionhead{align-items:start}
+      .sectionhead p{max-width:240px}
+    }
+    @media(max-width:600px){
+      .wrap{width:calc(100% - 32px)}
+      .mast{padding:18px 0}
+      .mast .small{display:none}
+      .categoryhead .small{display:none}
+      .categorylinks{gap:6px}
+      .categorylinks a{font-size:.74rem;padding:6px 9px}
+      .hero{padding-top:32px}
+      .hero h1{font-size:3rem}
+      .herofigure img{padding:25px}
+      .answer{grid-template-columns:1fr;gap:13px;padding:24px}
+      .section{padding:43px 0}
+      .sectionhead{display:block}
+      .sectionhead p{max-width:none;margin-top:16px}
+      .workflow,.referencegrid,.notes{grid-template-columns:1fr}
+      .workflow{gap:27px}
+      .reference{
+        display:grid;
+        grid-template-columns:39% 61%
+      }
+      .reference img{
+        height:100%;
+        aspect-ratio:auto;
+        padding:10px
+      }
+      .reference figcaption{padding:18px}
+      .reference h3{font-size:1.05rem}
+      .reference p{font-size:.83rem}
+      .note{padding:23px}
+      .closing{display:block;padding:27px}
+      .closing .button{margin-top:20px}
+      .toplink{font-size:.75rem}
+    }
+    @media(prefers-reduced-motion:reduce){
+      *{transition:none!important}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebPage",
+        "name":"Rizzitgo spreadsheet: Finds, Fit & QC Field Notes",
+        "description":"An independent guide to comparing product links, sizing, QC photos and total costs, with category links to CAFANS.",
+        "inLanguage":"en",
+        "about":{
+          "@type":"Thing",
+          "name":"Rizzitgo spreadsheet"
+        }
+      },
+      {
+        "@type":"Article",
+        "headline":"From Rizzitgo finds to a useful shortlist",
+        "description":"A three-step guide: preserve the source, compare the fit and inspect the available evidence.",
+        "inLanguage":"en",
+        "articleSection":"Buying guide"
+      },
+      {
+        "@type":"FAQPage",
+        "inLanguage":"en",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"What is a Rizzitgo spreadsheet?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"A Rizzitgo spreadsheet is a product-discovery list or catalog used to organize shopping references by category. It may include source links, images and sizing notes. A listing is a starting point for research, not a guarantee of stock, quality or authenticity."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Is this an official Rizzitgo website or a downloadable sheet?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"No. This is an independent reading guide, not an official agent website, live inventory feed or downloadable spreadsheet. Its category links open CAFANS, a separate destination; they do not open Rizzitgo checkout."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"How do I check Rizzitgo product links?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Open the original listing and compare its seller, product identifier, selected color and size with your saved reference. Recheck availability and ordering terms. If a link is unavailable, look for the exact model and variant rather than assuming a similar image is the same item."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Do QC photos prove an item is authentic?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"No. Warehouse inspection photos can help show visible condition, color, measurements and obvious defects, but they do not establish authenticity, material composition or long-term durability. Confirm provenance separately with the seller."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"How should I choose a clothing or shoe size?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Use the exact listing's size chart and measurement method. Compare garment measurements with a well-fitting item you own, and foot length with the model's footwear guidance. Letter sizes and EU, UK or US labels alone are not enough."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"What should a shipping estimate include?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Check product cost, domestic delivery, service charges, international freight, currency conversion fees and any applicable destination charges. Ask whether the route uses actual or volumetric weight. A preliminary estimate is not a final quote."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/gyhia/">
+</head>
+<body>
+  <header class="wrap mast">
+    <a class="wordmark" href="https://www.cafans.com" aria-label="Visit CAFANS">FIND<span>/</span>NOTES</a>
+    <span class="small">Independent fashion research · English edition</span>
+    <a class="toplink" href="https://www.cafans.com">Explore CAFANS ↗</a>
+  </header>
+
+  <nav class="categories" aria-label="Browse CAFANS product categories">
+    <div class="wrap">
+      <div class="categoryhead">
+        <p class="label">Choose a category</p>
+        <span class="small">Category links open CAFANS</span>
+      </div>
+      <div class="categorylinks">
+        <a href="https://cafans.com/category-911-Shoes.html">Shoes</a>
+        <a href="https://cafans.com/category-912-Hoodies%2FSweaters.html">Hoodies/Sweaters</a>
+        <a href="https://cafans.com/category-913-T-Shirts.html">T-Shirts</a>
+        <a href="https://cafans.com/category-914-Jackets.html">Jackets</a>
+        <a href="https://cafans.com/category-915-Pants%2FShorts.html">Pants/Shorts</a>
+        <a href="https://cafans.com/category-916-Headwear.html">Headwear</a>
+        <a href="https://cafans.com/category-917-Sets.html">Sets</a>
+        <a href="https://cafans.com/category-918-underwear%2Funderpants.html">Underwear/underpants</a>
+        <a href="https://cafans.com/category-919-Jersey.html">Jersey</a>
+        <a href="https://cafans.com/category-920-Accessories.html">Accessories</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <p class="label">Rizzitgo spreadsheet · A practical reading guide</p>
+        <h1 id="page-title">Read the details.<span>Refine the shortlist.</span></h1>
+        <p class="intro">A good find is more than a convincing photograph. Use these independent field notes to compare product sources, understand fit and read QC images before deciding what deserves a place on your list.</p>
+        <a class="button" href="https://www.cafans.com">
+          Discover categories on CAFANS <span aria-hidden="true">↗</span>
+        </a>
+        <p class="small" style="margin-top:14px">A separate catalog destination. No Rizzitgo affiliation.</p>
+      </div>
+      <figure class="herofigure">
+        <span class="indexstamp">REFERENCE 01 / FOOTWEAR</span>
+        <img
+          src="https://www.nike.qa/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dwff6f1a37/nk/4ee/a/3/0/b/0/4eea30b0_fcae_4804_a6b5_ac01a3cd1c93.png?sw=900&amp;sh=700&amp;sm=fit"
+          width="900"
+          height="700"
+          alt="White Nike Cortez sneaker with a black Swoosh and black heel tab, shown in profile"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async">
+        <figcaption><strong>Nike Cortez visual reference.</strong> Start a sneaker comparison with shape, panel layout and the exact model identifier.</figcaption>
+      </figure>
+    </section>
+
+    <aside class="answer" aria-labelledby="quick-answer">
+      <h2 id="quick-answer">What does the term mean?</h2>
+      <p>A <strong>Rizzitgo spreadsheet</strong> is a product-discovery list or catalog used to organize shopping references by category. It may include source links, images and sizing notes. A listing is a starting point for research, not a guarantee of stock, quality or authenticity.</p>
+    </aside>
+
+    <section class="section" aria-labelledby="workflow-title">
+      <div class="sectionhead">
+        <div>
+          <p class="label">01 / Beginner shopping guide</p>
+          <h2 id="workflow-title">From Rizzitgo finds to a useful shortlist</h2>
+        </div>
+        <p>Learning how to use a Rizzitgo spreadsheet starts with three checks you can repeat for any category.</p>
+      </div>
+      <div class="workflow">
+        <article>
+          <h3>Keep the source attached</h3>
+          <p>Save the source product URL, seller name and product identifier together. For Taobao product links, Weidian listings or 1688 product references, check the original page rather than relying on a copied thumbnail. Record the selected color and size so your product variant check stays specific.</p>
+        </article>
+        <article>
+          <h3>Compare measurements first</h3>
+          <p>A useful Rizzitgo sizing guide starts with the exact listing's clothing size chart. Use chest width measurement for tops, jacket sleeve length for outerwear and pants inseam for trousers. For shoes, compare foot length measurement with the model's guidance; a shoe size conversion alone may miss fit differences.</p>
+        </article>
+        <article>
+          <h3>Separate photos from proof</h3>
+          <p>Read Rizzitgo QC photos alongside the listing and selected variant. Warehouse inspection photos may reveal uneven stitching, an unexpected shade or a missing component. Note QC photo limitations: camera light changes color, and images cannot establish material composition or how an item will wear.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="reference-title">
+      <div class="sectionhead">
+        <div>
+          <p class="label">02 / The detail study</p>
+          <h2 id="reference-title">Three references. Three different fit questions.</h2>
+        </div>
+        <p>Use brand photography to study the product type, then verify the actual item you are considering.</p>
+      </div>
+      <div class="referencegrid">
+        <figure class="reference">
+          <img
+            src="https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-pique-cotton-t-shirt--HQY41WTCL002_PM2_Front%20view.jpg?wid=600&amp;hei=600"
+            width="600"
+            height="600"
+            alt="Milk-white Louis Vuitton piqué cotton T-shirt with short sleeves and a chest pocket, front view"
+            loading="lazy"
+            decoding="async">
+          <figcaption>
+            <p class="label">Louis Vuitton / Clothing</p>
+            <h3>Start with the silhouette</h3>
+            <p>For T-shirt fit, compare chest width, shoulder position and body length with a top you already wear. Texture and a familiar size label cannot tell you whether the cut suits you.</p>
+            <a href="https://www.cafans.com">Explore clothing on CAFANS ↗</a>
+          </figcaption>
+        </figure>
+        <figure class="reference">
+          <img
+            src="https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1767031219/845753_4HBHS_9068_003_100_0000_Light-cotton-baseball-hat-with-print.jpg"
+            width="1200"
+            height="1200"
+            alt="Model wearing a white Gucci baseball cap with a printed logo on the side"
+            loading="lazy"
+            decoding="async">
+          <figcaption>
+            <p class="label">Gucci / Headwear</p>
+            <h3>Adjustable is not universal</h3>
+            <p>Check the stated circumference range, crown depth and closure when comparing adjustable cap fit. A side photograph helps show the profile, but cannot replace a measurement.</p>
+            <a href="https://www.cafans.com">Explore headwear on CAFANS ↗</a>
+          </figcaption>
+        </figure>
+        <figure class="reference">
+          <img
+            src="https://assets.hermes.com/is/image/hermesproduct/700001FP01_front_wm_101?%24product_default_bg%24=&amp;wid=600&amp;hei=600"
+            width="600"
+            height="600"
+            alt="Black Hermès Clic H enamel bracelet with a silver-tone H clasp, front view"
+            loading="lazy"
+            decoding="async">
+          <figcaption>
+            <p class="label">Hermès / Jewelry</p>
+            <h3>Measure the wearing space</h3>
+            <p>Bracelet sizing depends on the internal dimensions and closure, not just how large it looks in a photograph. Check the fastening, stated finish and care guidance before choosing.</p>
+            <a href="https://www.cafans.com">Explore accessories on CAFANS ↗</a>
+          </figcaption>
+        </figure>
+      </div>
+      <p class="disclosure">Brand images are editorial visual references. They do not represent verified CAFANS inventory or authenticate third-party listings. This guide has no official relationship with Rizzitgo, Nike, Louis Vuitton, Gucci or Hermès.</p>
+    </section>
+
+    <section class="section" aria-labelledby="comparison-title">
+      <div class="sectionhead">
+        <div>
+          <p class="label">03 / Compare like with like</p>
+          <h2 id="comparison-title">What to check in each category</h2>
+        </div>
+        <p>The category label helps you browse. Measurements and listing details help you choose.</p>
+      </div>
+      <div class="tablebox">
+        <table>
+          <caption>A practical comparison checklist</caption>
+          <thead>
+            <tr>
+              <th scope="col">Category</th>
+              <th scope="col">Record before choosing</th>
+              <th scope="col">Look beyond the image</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Shoes</th>
+              <td>Model, selected size, foot-length guidance and outsole shape.</td>
+              <td>White leather sneakers can look similar while differing in material, width and construction.</td>
+            </tr>
+            <tr>
+              <th scope="row">Hoodies / Jackets</th>
+              <td>Chest, sleeve and body measurements; fabric composition.</td>
+              <td>Allow room for hoodie layering. Check whether the chart measures the garment or the body.</td>
+            </tr>
+            <tr>
+              <th scope="row">Pants / Shorts</th>
+              <td>Waist, rise and inseam; shorts waist measurement at rest and stretched when relevant.</td>
+              <td>Elastic and drawstrings do not remove the need to check the stated range.</td>
+            </tr>
+            <tr>
+              <th scope="row">Sets / Jersey</th>
+              <td>Measurements for both pieces in matching sets; chest and length for jersey sizing.</td>
+              <td>One size label may cover pieces with different proportions. Confirm what the listing includes.</td>
+            </tr>
+            <tr>
+              <th scope="row">Underwear</th>
+              <td>Waist range, underwear fabric composition and seller's hygiene-return conditions.</td>
+              <td>Check the return policy before ordering; an unopened-item rule may affect your options.</td>
+            </tr>
+            <tr>
+              <th scope="row">Headwear / Accessories</th>
+              <td>Hat circumference, bracelet dimensions, closure and stated materials.</td>
+              <td>Close-ups help with visible details; they do not verify provenance or metal composition.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="notes-title">
+      <div class="sectionhead">
+        <div>
+          <p class="label">04 / Reading room</p>
+          <h2 id="notes-title">Two notes to read before ordering</h2>
+        </div>
+        <p>Keep uncertainty visible in your notes. A missing detail is a reason to investigate further.</p>
+      </div>
+      <div class="notes">
+        <article class="note">
+          <p class="label">Field note / Product links</p>
+          <h3>When a link changes, pause the comparison</h3>
+          <p>Rizzitgo product links are only useful while they still identify the item you researched. A listing can disappear, change its available options or display a different main image.</p>
+          <p>For unavailable product links, search using the exact model or product identifier. Compare seller identity and selected variant again before treating a replacement as equivalent. A similar photograph is not enough.</p>
+          <p>Keep your original URL, the date you checked it and the unresolved question in one note. If you cannot connect the reference to a current listing, leave it off the purchase shortlist.</p>
+        </article>
+        <article class="note">
+          <p class="label">Field note / Shipping</p>
+          <h3>Make room for the costs outside the item</h3>
+          <p>A Rizzitgo shipping checklist should separate an international shipping estimate from a final amount due. Destination, packaging, route limits and the chargeable weight can all affect the calculation.</p>
+          <span class="formula">Budget = item + domestic delivery + service charges + international freight + applicable fees</span>
+          <p>Ask whether actual or volumetric weight applies. Check currency conversion fees, optional services and any destination charges relevant to your parcel. Confirm the current terms with the service provider before paying; this page does not quote freight or delivery dates.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section faqgrid" aria-labelledby="faq-title">
+      <div class="faqintro">
+        <p class="label">05 / Direct answers</p>
+        <h2 id="faq-title" style="margin-top:12px">A few questions worth asking.</h2>
+        <p>Clear answers for using a product-discovery list without confusing a reference, a catalog and a checkout.</p>
+      </div>
+      <div>
+        <details open>
+          <summary>What is a Rizzitgo spreadsheet?</summary>
+          <p>A Rizzitgo spreadsheet is a product-discovery list or catalog used to organize shopping references by category. It may include source links, images and sizing notes. A listing is a starting point for research, not a guarantee of stock, quality or authenticity.</p>
+        </details>
+        <details>
+          <summary>Is this an official Rizzitgo website or a downloadable sheet?</summary>
+          <p>No. This is an independent reading guide, not an official agent website, live inventory feed or downloadable spreadsheet. Its category links open CAFANS, a separate destination; they do not open Rizzitgo checkout.</p>
+        </details>
+        <details>
+          <summary>How do I check Rizzitgo product links?</summary>
+          <p>Open the original listing and compare its seller, product identifier, selected color and size with your saved reference. Recheck availability and ordering terms. If a link is unavailable, look for the exact model and variant rather than assuming a similar image is the same item.</p>
+        </details>
+        <details>
+          <summary>Do QC photos prove an item is authentic?</summary>
+          <p>No. Warehouse inspection photos can help show visible condition, color, measurements and obvious defects, but they do not establish authenticity, material composition or long-term durability. Confirm provenance separately with the seller.</p>
+        </details>
+        <details>
+          <summary>How should I choose a clothing or shoe size?</summary>
+          <p>Use the exact listing's size chart and measurement method. Compare garment measurements with a well-fitting item you own, and foot length with the model's footwear guidance. Letter sizes and EU, UK or US labels alone are not enough.</p>
+        </details>
+        <details>
+          <summary>What should a shipping estimate include?</summary>
+          <p>Check product cost, domestic delivery, service charges, international freight, currency conversion fees and any applicable destination charges. Ask whether the route uses actual or volumetric weight. A preliminary estimate is not a final quote.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <div>
+        <h2 id="closing-title">Choose a category. Keep your standards.</h2>
+        <p>Continue to CAFANS to explore fashion references with these checks in mind.</p>
+      </div>
+      <a class="button" href="https://www.cafans.com">
+        Explore CAFANS <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p><strong>FIND/NOTES · Independent buying guide.</strong> Educational content; no checkout, live stock feed or authenticity certification. Brand names identify the visual references discussed. All browsing links lead to CAFANS; current product details and terms must be checked at the relevant destination.</p>
+    </div>
+  </footer>
+</body>
+</html>
